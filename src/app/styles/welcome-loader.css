@@ -1,0 +1,15 @@
+@keyframes expand {
+    from {
+      width: 5px;
+      transform: translateX(-25%);
+    }
+    to {
+      width: 300px;
+      transform: translateX(-0%);
+    }
+  }
+  
+  
+.expand-animation {
+    animation: expand 2s forwards; 
+}

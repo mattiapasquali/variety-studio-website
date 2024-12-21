@@ -3,7 +3,7 @@ import Navbar, { LinksProps } from "./components/navbar";
 
 import Image from 'next/image';
 
-import LogoImage from "../app/assets/varietystudioslogo.png";
+import LogoImage from "../app/assets/logo.png";
 import TeamImage from "../app/assets/employees.svg";
 import MailImage from "../app/assets/mail.svg";
 import ServiceImage from "../app/assets/service.svg";
@@ -44,7 +44,6 @@ export default function Home() {
       <section className="absolute top-2 transform left-1/2 -translate-x-1/2">
       </section>
       <main className="h-screen flex items-center">
-        <Image className="mx-auto" src={LogoImage} alt="Logo" width={600} height={400} />
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
       </footer>

@@ -23,7 +23,8 @@ const Navbar : React.FC<LinksProps> = (props) => {
         <nav className={`bg-white w-full z-10 text-black fixed ${isOpen ? "h-auto" : "h-auto"}`}>
             <div className="mx-auto flex items-center justify-between px-4 py-3  max-w-[1000px] ">
                 <div className="inline-flex items-center">
-                    <Image className="h-10 mr-2 rounded " src={props.logo} width={100} height={100} alt="logo"/>
+                    <Image className="w-[35px] h-[35px] mr-2 rounded " src={props.logo} width={100} height={100} alt="logo"/>
+                    <p className="sm:hidden lg:block text-md ">Variety Studios </p>
                 </div>
                 <div className="hidden lg:flex sm:flex items-center justifay-center text-center mx-auto">                           {
                         props.links.map((link : LinkProps, index : number) => (

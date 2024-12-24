@@ -3,6 +3,7 @@
 import React,{ useEffect, useState, useRef } from "react";
 import WelcomeLoader from "./components/welcome-loader";
 import Navbar, { LinkProps } from "./components/navbar";
+import About from "./components/About";
 
 import Image from 'next/image';
 
@@ -61,9 +62,11 @@ export default function Home() {
   return (
     <div className="g-screen font-[family-name:var(--font-geist-sans)] w-full ">
       <Navbar links={navbarLinks} logo={LogoImage} isRounded={navbarRounded} ></Navbar>
-      <section className="absolute top-2 transform left-1/2 -translate-x-1/2">
+      <section className=" h-screen">
+      dsf
       </section>
       <main className="h-screen flex items-center">
+        <About/>
       </main>
       <footer className="row-start-3 h-screen bg-black-800 flex gap-6 flex-wrap items-center justify-center">
       sdfgkjdfg

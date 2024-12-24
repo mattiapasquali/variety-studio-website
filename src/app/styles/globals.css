@@ -14,6 +14,22 @@
   }
 }
 
+@font-face {
+  font-family: 'NunitoSans'; 
+  src: url('../fonts/Nunito_Sans/NunitoSans-Italic-VariableFont_YTLC\,opsz\,wdth\,wght.ttf') format('ttf'),
+       url('../fonts/Nunito_Sans/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf') format('ttf');
+  font-weight: normal; 
+  font-style: normal; 
+}
+
+@font-face {
+  font-family: 'Ubuntu'; 
+  src: url('../fonts/Ubuntu/Ubuntu-LightItalic.ttf') format('ttf'),
+       url('../fonts/Ubuntu/Ubuntu-BoldItalic.ttf') format('ttf');
+  font-weight: normal; 
+  font-style: normal; 
+}
+
 body {
   color: var(--foreground);
   background: var(--background);

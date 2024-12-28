@@ -41,14 +41,12 @@ const navbarLinks:  Array<LinkProps> =
 export default function Home() {
   const [navbarRounded, setNavbarRounded] = useState(false);
   const componentRef : any= useRef([]);
+  
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const containerHeight = window.innerHeight;
-      const totalHeight = document.body.clientHeight;
-      
-      //console.log(scrollPosition);
+
       setNavbarRounded(scrollPosition > 10);
     };
 
@@ -66,7 +64,7 @@ export default function Home() {
       dsf
       </section>
       <main className="h-screen flex items-center">
-        <About/>
+        <About scrollPosition={scroll}/>
       </main>
       <footer className="row-start-3 h-screen bg-black-800 flex gap-6 flex-wrap items-center justify-center">
       sdfgkjdfg

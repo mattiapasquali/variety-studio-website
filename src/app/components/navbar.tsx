@@ -21,7 +21,6 @@ const Navbar : React.FC<LinksProps> = (props) => {
     const [expanded, setExpanded] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
 
-    console.log(props.isRounded);
     return (
         <nav className={`bg-white w-full z-10 text-black fixed h-auto transition-[border-radius] duration-300 ease-linear  ${props.isRounded ? "scale-100 left-1/2 trasform -translate-x-1/2 rounded-bl-[30px] rounded-br-[30px] mx-auto  md:max-w-[800px] lg:max-w-[900px] " : " "}`}>
             <div className="mx-auto flex items-center justify-between px-4 py-6  max-w-[1000px] ">

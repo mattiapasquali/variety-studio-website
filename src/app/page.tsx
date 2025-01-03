@@ -3,7 +3,8 @@
 import React,{ useEffect, useState, useRef } from "react";
 import WelcomeLoader from "./components/welcome-loader";
 import Navbar, { LinkProps } from "./components/navbar";
-import About from "./components/About";
+import About from "./components/about";
+import Footer from "./components/contact-us";
 
 import Image from 'next/image';
 
@@ -11,13 +12,16 @@ import LogoImage from "../app/assets/logo.png";
 import TeamImage from "../app/assets/employees.svg";
 import MailImage from "../app/assets/mail.svg";
 import ServiceImage from "../app/assets/service.svg";
+import PorfolioImage from "../app/assets/product.svg";
+import ContactUs from "./components/contact-us";
+import Service from "./components/service";
 
 
 const navbarLinks:  Array<LinkProps> = 
 [
     {
       name: "About", // Perché ogni taglio di capelli è un'opportunità di business! 
-      link: "#link",
+      link: "#about-us",
       img: TeamImage
     },
     {
@@ -28,7 +32,7 @@ const navbarLinks:  Array<LinkProps> =
     {
       name: "Portfolio",
       link: "#link",
-      img: TeamImage
+      img: PorfolioImage
     },
     {
       name: "Contact Us",
@@ -58,17 +62,19 @@ export default function Home() {
 
 
   return (
-    <div className="g-screen font-[family-name:var(--font-geist-sans)] w-full ">
-      <Navbar links={navbarLinks} logo={LogoImage} isRounded={navbarRounded} ></Navbar>
-      <section className=" h-screen">
-      dsf
+    <div className="g-screen font-[family-name:var(--font-geist-sans)] bg-white">
+      <Navbar links={navbarLinks} logo={LogoImage} isRounded={true} />
+      <section className="h-screen ">
+        video
       </section>
-      <main className="h-screen flex items-center">
-        <About scrollPosition={scroll}/>
+      <Service/>
+      <main className="min-h-screen flex items-center row">
+        <About id={"about-us"}/>
       </main>
-      <footer className="row-start-3 h-screen bg-black-800 flex gap-6 flex-wrap items-center justify-center">
-      sdfgkjdfg
+      <footer>
+        <ContactUs/>
       </footer>
     </div>
+    
   );
 }

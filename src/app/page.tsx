@@ -6,7 +6,7 @@ import Navbar, { LinkProps } from "./components/navbar";
 import HomePage from "./components/home";
 import About from "./components/about";
 import Service from "./components/service";
-import ContactUs from "./components/contact-us";
+import ContactUs, { ContactsDataProps } from "./components/contact-us";
 
 import Image from 'next/image';
 
@@ -15,7 +15,11 @@ import TeamImage from "../../public/assets/employees.svg";
 import MailImage from "../../public/assets/mail.svg";
 import ServiceImage from "../../public/assets/service.svg";
 import PorfolioImage from "../../public/assets/product.svg";
-import RobotImage from ".../../public/assets/robot.jpg";
+import InstagramIcon from "./../../public/assets/instagram.svg";
+import TikTokIcon from "./../../public/assets/tik-tok.svg";
+import LinkedinIcon from "./../../public/assets/linkedin.svg";
+import MailIcon from "./../../public/assets/mail.svg";
+
 
 const navbarLinks:  Array<LinkProps> = 
 [
@@ -23,25 +27,43 @@ const navbarLinks:  Array<LinkProps> =
     {
       name: "Service",
       link: "#service",
-      img: ServiceImage
+      image: ServiceImage
     },
     {
       name: "About", // Perché ogni taglio di capelli è un'opportunità di business! 
       link: "#about-us",
-      img: TeamImage
+      image: TeamImage
     },
     {
       name: "Portfolio",
       link: "#link",
-      img: PorfolioImage
+      image: PorfolioImage
     },
     {
       name: "Contact Us",
       link: "#link",
-      img: MailImage
+      image: MailImage
     },
   ];
 
+const contactsData : Array<ContactsDataProps> = [
+  {
+    name : "Instagram",
+    link : "link",
+    image : InstagramIcon
+  },
+  {
+    name : "TikTok",
+    link : "",
+    image : TikTokIcon
+  },
+  {
+    name : "Linkedin",
+    link : "",
+    image : LinkedinIcon
+  },
+
+]
 
 export default function Home() {
   const [navbarRounded, setNavbarRounded] = useState(false);
@@ -70,7 +92,8 @@ export default function Home() {
           <About id={"about-us"}/>
       </main>
       <footer>
-        <ContactUs/>
+        <div className="bg-white">dfgfdg</div>
+        <ContactUs contacts={contactsData}/>
       </footer>
     </div>
   );

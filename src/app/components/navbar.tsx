@@ -8,7 +8,7 @@ import { link } from "fs";
 export interface LinkProps{
     name : string;
     link : string;
-    img: React.ReactElement;
+    image: React.ReactElement;
 }
 
 export interface LinksProps{
@@ -33,7 +33,7 @@ const Navbar : React.FC<LinksProps> = (props) => {
                         {
                             props.links.map((link : LinkProps, index : number) => (
                                 <div key={index} className="flex items-center mr-4">                               
-                                <Image src={link.img} width={25} alt="logo"/>
+                                <Image src={link.image} width={25} alt="logo"/>
                                     <a key={index} href={link.link} className="font-semibold uppercase text-xs mr-4 ml-2 " onClick={() => setIsOpen(false)}>
                                         {link.name}
                                     </a>
@@ -67,7 +67,7 @@ const Navbar : React.FC<LinksProps> = (props) => {
                         {
                             props.links.map((link : LinkProps) => (
                                 <div className="flex items-left justify-center " >
-                                    <Image src={link.img} width={25} height={25} alt="logo"/>
+                                    <Image src={link.image} width={25} height={25} alt="logo"/>
                                     <a href={link.link} className="font-semibold text-2xl sm:text-4xl  ml-2 " onClick={() => setIsOpen(false)}>
                                         {link.name}
                                     </a>

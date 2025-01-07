@@ -41,7 +41,7 @@ const navbarLinks:  Array<LinkProps> =
     },
     {
       name: "Contact Us",
-      link: "#link",
+      link: "#contacts",
       image: MailImage
     },
   ];
@@ -93,7 +93,7 @@ export default function Home() {
       </main>
       <footer>
         <div className="bg-white">dfgfdg</div>
-        <ContactUs contacts={contactsData}/>
+        <ContactUs contacts={contactsData} id={"contacts"}/>
       </footer>
     </div>
   );

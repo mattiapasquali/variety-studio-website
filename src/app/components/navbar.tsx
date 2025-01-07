@@ -63,10 +63,10 @@ const Navbar : React.FC<LinksProps> = (props) => {
                     </div>
                 </div>
                 <div className={`overflow-hidden lg:hidden sm:hidden md:hidden transition-all duration-3000 ease-in-out ${isOpen ? "h-auto" : "h-0"}`}>
-                    <div className="grid grid-cols-2  gap-3 items-start text-center text-5xl justify-center mb-5">
+                    <div key="container-links" className="grid grid-cols-2  gap-3 items-start text-center text-5xl justify-center mb-5">
                         {
                             props.links.map((link : LinkProps) => (
-                                <div className="flex items-left justify-center " >
+                                <div key={link.name} className="flex items-left justify-center " >
                                     <Image src={link.image} width={25} height={25} alt="logo"/>
                                     <a href={link.link} className="font-semibold text-2xl sm:text-4xl  ml-2 " onClick={() => setIsOpen(false)}>
                                         {link.name}

@@ -19,7 +19,7 @@ import InstagramIcon from "./../../public/assets/instagram.svg";
 import TikTokIcon from "./../../public/assets/tik-tok.svg";
 import LinkedinIcon from "./../../public/assets/linkedin.svg";
 import MailIcon from "./../../public/assets/mail.svg";
-
+import DeviceImage from "./../../public/assets/device.png";
 
 const navbarLinks:  Array<LinkProps> = 
 [
@@ -87,12 +87,12 @@ export default function Home() {
     <div className="g-screen font-[family-name:var(--font-geist-sans)] bg-white">
       <Navbar links={navbarLinks} logo={LogoImage} isRounded={true} />  
       <main className="relative flex grid grid-cols  bg-white">
-          <HomePage/>
+          <HomePage contactsLink={navbarLinks[3].link} />
           <Service id={"service"}/>
           <About id={"about-us"}/>
       </main>
       <footer>
-        <div className="bg-white">dfgfdg</div>
+        <Image className="mx-auto" src={DeviceImage} width={1200} height={1200} alt="Device Image"/>
         <ContactUs contacts={contactsData} id={"contacts"}/>
       </footer>
     </div>

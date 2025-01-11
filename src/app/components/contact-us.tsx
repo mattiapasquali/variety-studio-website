@@ -76,7 +76,6 @@ const ContactUs : React.FC<ContactsUsProps> = (props) => {
                     ))
 
                 }
-
             </ul>
         </div>
     );

@@ -1,6 +1,10 @@
 import { useEffect, useRef } from "react";
 
-const HomePage: React.FC = () => {
+interface Props{
+    contactsLink : string;
+}
+
+const HomePage: React.FC<Props> = ( props ) => {
     const videoRef = useRef<HTMLVideoElement>(null);
 
     useEffect(() => {
@@ -21,11 +25,15 @@ const HomePage: React.FC = () => {
 
     return (
         <div className="flex items-center justify-center w-full h-screen relative grid ">
-            <h1 className="text-center text-6xl font-nunito font-bold lg:mt-[100px] lg:mb-[70px]">
-                Business <br className="block lg:hidden" />
-                Growth
-            </h1>
-            <div className="relative flex mx-auto lg:max-h-[800px] lg:w-[940px]">
+            <div className="font-nunito w-full flex grid lg:mb-[70px] lg:mt-[100px]">
+                <h1 className="text-center text-6xl  font-bold  w-full mb-3">
+                    Business <br className="block lg:hidden" />
+                    Growth
+                </h1>
+                <p className="text-center cursive mb-3">Unlock your company's full potential <br></br>with  tailored software</p>
+                <a href={props.contactsLink} className="bg-black text-white w-[140px] mx-auto  rounded-[20px] px-4 py-2 text-1xl font-bold font-nunito text-center">Know More</a>
+            </div>
+            <div className="relative flex mx-auto w-full lg:max-h-[800px] lg:w-[940px]">
                 <span className="hidden lg:block absolute bottom-0 z-20 left-0 bg-black w-[170px] h-[254px] rounded-tl-[200px]" />
                 <span className="hidden lg:block absolute bottom-0 z-20 right-0 bg-black w-[170px] h-[254px] rounded-tr-[12000px]" />
                 <video

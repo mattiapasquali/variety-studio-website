@@ -44,19 +44,22 @@ const About : React.FC<AboutProps> = (props) => {
                 <span ref={el => spansRef.current[0] = el} className={`text-3xl lg:text-5xl font-ubuntu mt-20 mb-10 px-10 font-bold text-gray-500 transition-all duration-300 ease-linear  ${highlightedSpan >= 1 ? "text-white" : ""}`}>
                     <p>From vision to reality, we craft tailored software that streamlines your business and drives results.</p>
                 </span>
-                <span  ref={el => spansRef.current[1] = el} className={`text-3xl lg:text-5xl font-ubuntu mb-10 px-10 font-bold text-gray-500 transition-all duration-300 ease-linear ${highlightedSpan >= 2 ? "text-white" : ""}`}>
+                <span  ref={el => spansRef.current[1] = el} className={`text-3xl lg:text-5xl font-ubuntu mb-7 px-10 font-bold text-gray-500 transition-all duration-300 ease-linear ${highlightedSpan >= 2 ? "text-white" : ""}`}>
                     <p className="mb-6"> We provide the answers to your challenges.</p>
+                </span>
+                <span  ref={el => spansRef.current[2] = el} className={`text-3xl lg:text-5xl font-ubuntu mb-3 px-10 font-bold text-gray-500 transition-all duration-300 ease-linear ${highlightedSpan >= 3 ? "text-white" : ""}`}>
                     <p className="mb-6">
                         We know how to solve your problems with customized and innovative software solutions for every need.
-                    </p>                </span>
-                <span  ref={el => spansRef.current[2] = el} className={`text-3xl lg:text-5xl font-ubuntu mb-10 px-10 font-bold text-gray-500 transition-all duration-300 ease-linear ${highlightedSpan >= 3 ? "text-white" : ""}`}>
-                    <p className="mb-6"> Your vision fuels our expertise. </p>
-                    <p>Together, we design software solutions that create real impact and lasting value.
-                    </p>
+                    </p>  
                 </span>
-                <b ref={el => spansRef.current[3] = el} className="font-ubuntu text-3xl lg:text-5xl mb-10 text-center mb-5"></b>
-                <b ref={el => spansRef.current[4] = el} className="font-ubuntu text-3xl lg:text-5xl mb-10 text-center mb-5"></b>
-
+                <span  ref={el => spansRef.current[3] = el} className={`text-3xl lg:text-5xl font-ubuntu mb-3 px-10 font-bold text-gray-500 transition-all duration-300 ease-linear ${highlightedSpan >= 4 ? "text-white" : ""}`}>
+                    <p className="mb-6"> Your vision fuels our expertise. </p>
+                    
+                </span>
+                <span  ref={el => spansRef.current[4] = el} className={`text-3xl lg:text-5xl font-ubuntu mb-10 px-10 font-bold text-gray-500 transition-all duration-300 ease-linear ${highlightedSpan >= 5 ? "text-white" : ""}`}>
+                    <p>Together, we design software solutions that create real impact and lasting value.</p>
+                </span>
+                <b ref={el => spansRef.current[5] = el} className="font-ubuntu text-3xl lg:text-5xl mb-10 text-center mb-5"></b>
             </div>
         </div>
     )

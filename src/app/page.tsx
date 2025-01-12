@@ -19,7 +19,6 @@ import InstagramIcon from "./../../public/assets/instagram.svg";
 import TikTokIcon from "./../../public/assets/tik-tok.svg";
 import LinkedinIcon from "./../../public/assets/linkedin.svg";
 import MailIcon from "./../../public/assets/mail.svg";
-import DeviceImage from "./../../public/assets/device.png";
 
 const navbarLinks:  Array<LinkProps> = 
 [
@@ -49,12 +48,12 @@ const navbarLinks:  Array<LinkProps> =
 const contactsData : Array<ContactsDataProps> = [
   {
     name : "Instagram",
-    link : "link",
+    link : "https://www.instagram.com/variety.studios/",
     image : InstagramIcon
   },
   {
     name : "TikTok",
-    link : "",
+    link : "https://www.tiktok.com/@variety.studios",
     image : TikTokIcon
   },
   {
@@ -92,7 +91,6 @@ export default function Home() {
           <About id={"about-us"}/>
       </main>
       <footer>
-        <Image className="mx-auto" src={DeviceImage} width={1200} height={1200} alt="Device Image"/>
         <ContactUs contacts={contactsData} id={"contacts"}/>
       </footer>
     </div>
